@@ -1,0 +1,185 @@
+/*
+/* Theme Name:   Media Salad Divi
+/* Description:  Divi child for Media Salad
+/* Author:       Media Salad
+/*  Author URI:   http://mediasalad.com
+/*  Template:     Divi
+/*  Version:      1.0.0
+/*  License:      GNU General Public License v2 or later
+/*  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+$gg_green:#73BF45;
+$nwtc_dark_blue:#04002D;
+$nwtc_blue:#0075BC; // From Norwex logo
+$nwtc_light_blue:#CAEEFF;
+$nwtc_tan:#DAEABF; // From Norwex logo
+$nwtc_light_green:#C8E6B6;
+$nwtc_green:#5FBB46; // From Norwex logo
+
+$norwex_blue: #026CB6;
+$norwex_blue_medium: #6697CF;
+$norwex_blue_light: #C8DBF1;
+$norwex_green:#77C025;
+$norwex_green_medium:#A0CE66;
+$norwex_green_light:#E7EEBB;
+
+$norwex_dark_grey: #5C6F7B;
+$norwex_dark_gray: $norwex_dark_grey;
+
+$norwex_dark_purple: #333092;
+
+$cf7-submit-button-color: $norwex_green;
+
+
+$mobile-small-max-width: 450px;
+$mobile-large-max-width: 450px;
+$tablet-max-width: 767px;
+
+@mixin clearfix() {
+	&:before{
+		content:" ";
+		display:table
+	}
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@import "contact-pam-module";
+@import "nwtc-homepage-posts";
+@import "faqs";
+@import "cf7_as_divi";
+@import "bloom";
+@import "cta--horiz";
+@import "meet-pam-homepage-topper";
+
+// @import "mermaid-blog";
+// @import "1-6-blog-divi-layout-kit";
+// @import "2-6-blog-divi-layout-kit";
+// @import "3-6-blog-divi-layout-kit";
+// @import "4-6-blog-divi-layout-kit";
+// @import "5-6-blog-divi-layout-kit";
+// @import "6-6-blog-divi-layout-kit";
+
+.nwtc-dark-blue-border{border:3px solid $norwex_dark_purple;}
+
+.nwtc-dark-blue-bg{background-color:$norwex_blue_medium !important;}
+.nwtc-blue-bg{background-color:$norwex_blue_medium !important;}
+.nwtc-light-blue-bg{background-color:$norwex_blue_light !important;}
+.nwtc-tan-bg{background-color:#DAEABF!important;}
+.nwtc-light-green-bg{background-color:$norwex_green_light !important;}
+.nwtc-green-bg{background-color:$norwex_green !important;}
+.nwtc-white-bg{background-color:#FFF!important;}
+
+.et_pb_promo_button.et_pb_button:hover{color:black !important}
+
+/* HIJACKING THE "GREEN THEME" */
+.et_color_scheme_green #et_search_icon:hover, .et_color_scheme_green .mobile_menu_bar:before, .et_color_scheme_green .footer-widget h4, .et_color_scheme_green .et_pb_sum, .et_color_scheme_green .et_pb_pricing li a, .et_color_scheme_green .et_pb_pricing_table_button, .et_color_scheme_green .comment-reply-link, .et_color_scheme_green .form-submit input, .et_color_scheme_green .et_pb_bg_layout_light .et_pb_newsletter_button, .et_color_scheme_green .et_pb_contact_submit, .et_color_scheme_green .et_password_protected_form .et_submit_button, .et_color_scheme_green .et_pb_bg_layout_light .et_pb_more_button, .et_color_scheme_green .et_pb_bg_layout_light .et_pb_promo_button, .et_color_scheme_green .et_overlay:before, .et_color_scheme_green .entry-summary p.price ins, .et_color_scheme_green.woocommerce div.product span.price, .et_color_scheme_green.woocommerce-page div.product span.price, .et_color_scheme_green.woocommerce #content div.product span.price, .et_color_scheme_green.woocommerce-page #content div.product span.price, .et_color_scheme_green.woocommerce div.product p.price, .et_color_scheme_green.woocommerce-page div.product p.price, .et_color_scheme_green.woocommerce #content div.product p.price, .et_color_scheme_green.woocommerce-page #content div.product p.price, .et_color_scheme_green #top-menu li.current-menu-ancestor>a, .et_color_scheme_green #top-menu li.current-menu-item>a, .et_color_scheme_green .bottom-nav li.current-menu-item>a{
+	color:$norwex_green;
+}
+
+
+/* PAM'S CAREER TIMELINE */
+	section.timeline{margin:15px 0}
+.timeline-module{padding:0 0 60px 20px;border-left:5px solid #e0e0e0;margin-left:8px;position:relative}
+.timeline-module:first-child{padding-top:0;margin-top:20px;border-top:none}
+.timeline-module:last-child{padding-bottom:0}
+.timeline-module h4{line-height:0.7em;font-size:22px;}
+.timeline-module.highlight{border-left-color:#59A8FF}
+.timeline-module.highlight h4{margin-left:-25px;padding:2px 7px 2px 25px;border-radius:0 5px 5px 0;background-color:#59A8FF;display:inline-block;color:#fff}
+.timeline-module.highlight:before{top:0;border-color:#59A8FF}
+.timeline-module:before{content:' ';display:inline-block;background-color:#fff;border:5px solid #e0e0e0;border-radius:50%;height:10px;width:10px;position:absolute;top:-3px;left:-12px}
+.timeline-module.highlight, .timeline.dashed .timeline-module.highlight {border-color:#59A8FF;}
+.timeline.dashed .timeline-module {border-left: 5px dashed #e0e0e0;}
+.timeline-module:before {height: 13px;width: 13px;left: -14px;}
+.timeline-module {margin-left: 14px;padding:0 0 20px 20px}
+.timeline-module:last-child:after, .timeline-module.last:after {content: ' ';display: inline-block;background-color: #e0e0e0;border: none;border-radius: 0;height: 5px;width: 15px;position: absolute;bottom: 0;left: -10px;}
+.timeline-module.highlight:last-child:after, .timeline-module.highlight.last:after {background-color:#59A8FF;}
+.timeline > h3 {margin:20px 0 10px 0;}
+	
+blockquote{ 
+   font-family: "open sans condensed", sans-serif;
+    font-weight: normal;
+    font-size: 33px;
+    padding: 15px 0 17px 10px;
+}
+
+.et_pb_testimonial_author, .et_pb_testimonial_meta{font-size: 15px;font-family:"Lato","Helvetica Neue", "arial", sans-serif;}
+.et_pb_social_media_follow{display:inline-block;}
+.image-max-200px img {max-width:200px;}
+#footer-info{display:none;}
+.nwtc-header-btn{margin-right:20px !important;}
+
+/* SHOP NOW PAGE */
+.page-id-459 .et_pb_module.et_pb_image {
+    overflow: hidden;
+    max-height: 210px;
+}
+
+// Shop my store Banner on most pages
+#left-area > .et_pb_section#shop-my-store{
+	padding: 0;
+	margin: 0 0 25px 0;
+	.et_pb_row{ 
+		padding: 0;
+		width: 100%;
+	}
+}
+
+// NORWEX PAGE TOPPER BANNER
+.et_pb_section#norwex-page-topper{
+	    margin: 0;
+    padding: 0;
+
+
+
+    .et_pb_module.et_pb_image.et_pb_image_0{
+    	margin: 0 !important; // b/c it was used elsewhere.
+	    padding: 0;
+	    max-width: none;
+	}
+}
+
+// SIDEBAR, ETC.
+
+.et_pb_widget_area.et_pb_module.et_pb_sidebar_0, #sidebar{
+
+	.et_pb_widget {
+	    margin-bottom: 20px;
+	    border-bottom: 1px solid #eee;
+	    padding-bottom: 20px;
+	}
+	.widgettitle{
+		font-size: 22px;
+		line-height: 1.3em;
+		margin-bottom: 1em;
+		padding: 0;
+	}
+
+	.catalog-thumb{
+		box-shadow: 1px 1px 4px rgba(black, .5);
+		border: 7px solid white;
+		box-sizing: border-box;
+		transform: rotate(-3deg);
+		margin-bottom: 10px;
+	}
+	.textwidget.custom-html-widget{
+		p a {
+			// Target of this selection are the "More links"
+			display:inline-block;
+			padding: 3px 5px;
+			border-radius: 5px;
+			background: rgba($norwex_blue_light,.5);
+			font-weight: bold;
+			transition: background 150ms ease;
+
+			&:hover{
+				background: $norwex_blue_light;
+				transition: background 150ms ease;
+			}
+		}
+	}
+}

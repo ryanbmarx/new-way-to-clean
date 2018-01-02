@@ -1,0 +1,139 @@
+/* 2-6 Blog Divi Layout Kit Css Code
+** Product Built By Divi Den - https://webdesign101.berlin/divi-den/
+** Get the latest kit here: https://webdesign101.berlin/product/blogs-divi-layout-kit/
+** Get Support Here: https://webdesign101.berlin/divi-den/support/
+** Default RED Colour to replace anywhere in the css = #cc0033
+*/
+
+body img.avatar {
+    display: none !important;
+}
+
+.blog_2 article {
+    border-radius: 6px;
+    box-shadow: 0px 0px 32.2px 2.8px rgba(204, 204, 204, 0.65);
+    text-align: center;
+    border-color: transparent !important;
+    padding-bottom: 207px !important;
+    position: relative;
+    cursor: pointer;
+}
+
+.blog_2 article:last-child {
+    margin-right: 0 !important;
+}
+
+.blog_2 .post-meta .categories {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 328px;
+}
+
+#page-container .blog_2 .post-meta .author.vcard a {
+    color: #2c2c2c !important;
+}
+
+#page-container .blog_2 .post-meta .author.vcard {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    color: #2c2c2c !important;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+.blog_2 .post-content {
+    display: none !important;
+}
+
+#page-container .blog_2 .post-meta .author.vcard img {
+    display: block !important;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+.blog_2 .et_pb_image_container a {
+    height: 100% !important;
+}
+
+.blog_2 .et_pb_image_container a img {
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+/*Hovers*/
+
+#page-container .blog_2 .post-meta .author.vcard img,
+.blog_2 article,
+.blog_2 article .et_pb_image_container a img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog_2 article:hover .et_pb_image_container a img {
+    transform: scale(1.1) translate(-45%, 0) rotate(5deg);
+}
+
+#page-container .blog_2 article:hover .post-meta .author.vcard img {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.blog_2 article:hover {
+    box-shadow: none;
+    border-color: #e1e1e1 !important;
+}
+
+.blog_2 article:hover .author.vcard a,
+.blog_2 article:hover .post-content,
+.blog_2 article:hover .post-meta .categories,
+.blog_2 article:hover .post-meta .published,
+.blog_2 article:hover h2.entry-title {
+    -webkit-animation: fadeIn 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: fadeIn 1s infinite;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 980px) {
+    #page-container .blog_2 .column {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+}

@@ -1,0 +1,65 @@
+.meet{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 800px;
+	margin: 0 auto;
+
+	&__intro{ 
+		min-width: 270px;
+	}
+	&__pam{
+		font: 60px/.8em "Open Sans Condensed", Helvetica, Arial, Lucida, sans-serif;
+		color: rgb(144, 198, 41);
+		margin: 0 0 10px 0;
+		text-align:right;
+		padding: 0;
+		font-weight: bold;
+	}
+
+	&__consult{ 
+		font: 16px/1.3em "Lato", Helvetica, Arial, Lucida, sans-serif;
+		color: white;
+		margin: 0;
+		text-align:right;
+	}
+	&__mug{ 
+		width: 200px;
+		margin: 0 15px;
+	
+		img{ 
+			width: 100%;
+		}
+	}
+
+	&__bio {
+		p{
+			font: 16px/1.3em "Lato", Helvetica, Arial, Lucida, sans-serif;
+			color:white;
+		}
+	}
+}
+@media all and (max-width: 800px){
+	.meet{ 
+		flex-wrap:wrap;
+		
+		&__mug{ 
+			margin: 0 0 15px 15px;
+			width: 150px;
+		}
+		&__bio{ 
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+
+@media all and (max-width: 550px){
+	.meet__intro{
+		min-width: none;
+		width: 100%;
+	}
+	.meet__pam{text-align: center;}
+	.meet__consult{text-align: center;}
+	.meet__mug{ margin: 15px auto;}
+}

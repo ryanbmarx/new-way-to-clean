@@ -1,0 +1,295 @@
+/* 5-6 Blog Divi Layout Kit Css Code
+** Product Built By Divi Den - https://webdesign101.berlin/divi-den/
+** Get the latest kit here: https://webdesign101.berlin/product/blogs-divi-layout-kit/
+** Get Support Here: https://webdesign101.berlin/divi-den/support/
+** Default RED Colour to replace anywhere in the css = #cc0033
+*/
+
+body img.avatar {
+    display: none !important;
+}
+
+.blog_5 article h2.entry-title img.avatar {
+    display: none !important;
+}
+
+.blog_5 article {
+    position: relative;
+    width: 48.5% !important;
+    margin-right: 3% !important;
+    float: left;
+    margin-bottom: 30px;
+    background-color: #fff;
+    padding-right: 2%;
+    cursor: pointer;
+    border-color: transparent;
+    box-shadow: 0 0 32.2px 2.8px rgba(204, 204, 204, 0.65);
+    overflow: hidden;
+
+}
+
+.blog_5 article:nth-child(2n+2) {
+    margin-right: 0 !important;
+}
+
+.blog_5 .post-meta span.published {
+    position: absolute;
+    background: #cc0033;
+    color: #fff;
+    max-width: 57px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    line-height: 100%;
+    padding: 10px;
+}
+
+.blog_5 .author.vcard:before {
+    content: "By ";
+    display: inline-block;
+    margin-right: 5px;
+    color: #969595 !important;
+}
+
+.blog_5 .author.vcard {
+    margin-bottom: 21px !important;
+    display: block;
+}
+
+.blog_5 .author.vcard a {
+    color: #969595 !important;
+
+}
+
+.blog_5 a.entry-featured-image-url {
+    max-width: 269px;
+    float: left;
+    height: 264px;
+    overflow: hidden;
+    margin-right: 7.5%;
+}
+
+.blog_5 a.entry-featured-image-url img {
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+.blog_5 .post-content {
+    display: none !important;
+}
+
+.blog_5 .post-meta .categories {
+    display: block;
+}
+
+/*Hovers*/
+
+.blog_5 article:hover {
+    box-shadow: none;
+    box-shadow: inset 0 0 0 1px #e1e1e1;
+}
+
+.blog_5 article:after,
+.blog_5 article:before {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    content: '';
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    pointer-events: none;
+    width: calc(100% - 210px);
+    height: auto;
+    z-index: 999999999999;
+    visibility: visible;
+}
+
+.blog_5 article:after {
+    -webkit-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    transform: scale(1, 0);
+}
+
+.blog_5 article:before {
+    -webkit-transform: scale(0, 1);
+    -ms-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+.blog_5 article:hover:after,
+.blog_5 article:hover:before {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.blog_5 article:hover:after {
+    -webkit-transition-duration: 1s !important;
+    transition-duration: 0.6s !important;
+}
+
+.blog_5 article a.entry-featured-image-url:before,
+.blog_5 article:before,
+.blog_5 article,
+.blog_5 article .entry-featured-image-url,
+.blog_5 article .entry-featured-image-url img {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog_5 article:hover a.entry-featured-image-url:before {
+    right: -25px;
+}
+
+.blog_5 article a.entry-featured-image-url:before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    transform: rotate(45deg);
+    visibility: visible !important;
+    z-index: 3 !important;
+    background-color: #fff !important;
+
+    right: -70px;
+}
+
+.blog_5 article:hover a.entry-featured-image-url {
+    max-width: 170px;
+
+}
+
+.blog_5 article:hover .author.vcard a,
+.blog_5 article:hover .post-content,
+.blog_5 article:hover .post-meta .categories,
+.blog_5 article:hover .post-meta .published,
+.blog_5 article:hover h2.entry-title {
+    -webkit-animation: fadeIn 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: fadeIn 1s infinite;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 1390px) {
+    .blog_5 a.entry-featured-image-url {
+        max-width: 159px;
+        height: 224px;
+    }
+
+    .blog_5 article:after,
+    .blog_5 article:before {
+        width: calc(100% - 170px);
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .blog_5 article:hover a.entry-featured-image-url {
+        max-width: 150px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .blog_5 a.entry-featured-image-url {
+        max-width: 230px;
+    }
+
+    .blog_5 article {
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-bottom: 40px;
+    }
+
+    .blog_5 article h2.entry-title {
+        margin-top: 4vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .blog_5 a.entry-featured-image-url {
+        max-width: 100%;
+        height: auto;
+        width: 100%;
+        float: none;
+    }
+
+    .blog_5 a.entry-featured-image-url img {
+        height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        left: 0;
+        transform: translate(0, 0);
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    .blog_5 article .post-meta,
+    .blog_5 article h2.entry-title {
+        margin-top: 0 !important;
+        padding: 0 20px 20px;
+    }
+
+    .blog_5 article {
+        padding-right: 0 !important;
+    }
+
+    .blog_5 article:hover a.entry-featured-image-url {
+        max-width: none;
+    }
+
+    .blog_5 article:after, .blog_5 article:before {
+        display: none;
+    }
+
+    .blog_5 article a.entry-featured-image-url:before {
+        bottom: -40px;
+        top: auto;
+        right: 0;
+        left: 0;
+    }
+
+    .blog_5 article:hover a.entry-featured-image-url:before {
+        right: 0;
+        bottom: -11px;
+    }
+
+}

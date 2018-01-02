@@ -1,0 +1,178 @@
+/* 4-6 Blog Divi Layout Kit Css Code
+** Product Built By Divi Den - https://webdesign101.berlin/divi-den/
+** Get the latest kit here: https://webdesign101.berlin/product/blogs-divi-layout-kit/
+** Get Support Here: https://webdesign101.berlin/divi-den/support/
+** Default RED Colour to replace anywhere in the css = #cc0033
+*/
+
+body img.avatar {
+    display: none !important;
+}
+
+.blog_4 article {
+    border: none !important;
+    padding: 30px !important;
+    position: relative !important;
+    background-color: #fff;
+    cursor: pointer;
+    border: solid 1px #eaeaea !important;
+}
+
+.blog_4 article .et_pb_image_container {
+    margin: -30px -30px 10px;
+}
+
+.blog_4 .et_pb_image_container a {
+    height: 100% !important;
+}
+
+.blog_4 .et_pb_image_container a img {
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+    z-index: 1000;
+    left: 50%;
+    transform: translate(-50%, 0);
+    position: relative;
+}
+
+#page-container .blog_4 img.avatar {
+    border-radius: 50%;
+    top: 203px;
+    position: absolute;
+    left: 30px;
+    max-width: 71px;
+    border: 4px solid #fff;
+    display: block !important;
+    z-index: 1000;
+}
+
+.blog_4 .column.size-1of3 {
+    border: 1px solid transparent;
+}
+
+/*Hovers*/
+
+.blog_4 article:after,
+.blog_4 article .et_pb_image_container a img,
+.blog_4 article {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.blog_4 article:hover:after {
+    opacity: 1;
+    transform: translateY(30px);
+    -webkit-animation: shrink2 0.4s infinite; /* Safari 4.0 - 8.0 */
+    animation: shrink2 0.4s infinite;
+    animation-iteration-count: 1;
+}
+
+.blog_4 article:after {
+    pointer-events: none;
+    position: absolute;
+    z-index: -1;
+    content: '';
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 10px;
+    width: 90%;
+    opacity: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+    transition-duration: 0.4s;
+    transition-property: transform opacity;
+    visibility: visible;
+    margin: auto;
+}
+
+.blog_4 article:hover {
+    transform: translateY(-20px);
+
+}
+
+.blog_4 article:hover .author.vcard a,
+.blog_4 article:hover .post-content,
+.blog_4 article:hover .post-meta .categories,
+.blog_4 article:hover .post-meta .published,
+.blog_4 article:hover h2.entry-title {
+    -webkit-animation: fadeIn 3s infinite; /* Safari 4.0 - 8.0 */
+    animation: fadeIn 3s infinite;
+    animation-iteration-count: 1;
+}
+
+@keyframes shrink2 {
+
+    from, 20%, to {
+        width: 15%;
+    }
+
+    30% {
+        width: 25%;
+    }
+
+    40% {
+        width: 35%;
+    }
+
+    50% {
+        width: 45%;
+    }
+
+    60% {
+        width: 55%;
+    }
+
+    70% {
+        width: 65%;
+    }
+
+    80% {
+        width: 75%;
+    }
+
+    90% {
+        width: 85%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 980px) {
+    #page-container .blog_4 .column {
+        width: 100% !important;
+        max-width: 400px !important;
+        margin: 0 auto !important;
+        float: none !important;
+    }
+}

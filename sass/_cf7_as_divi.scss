@@ -1,0 +1,115 @@
+.wpcf7 label{
+	font-weight: bold;
+}
+
+
+.wpcf7-text, .wpcf7-textarea, .wpcf7-captchar {
+	background-color: #eee !important;
+	border: none !important;
+	width: 100% !important;
+	border-radius: 0 !important;
+	font-size: 14px;
+	color: #999 !important;
+	padding: 16px !important;
+	box-sizing: border-box;
+	margin:10px 0;
+}
+.wpcf7-submit {
+	color: #fff !important;
+	text-align:center;
+	margin: 8px auto 0;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 500;
+	width: 100%;
+	max-width: 200px;
+	border-radius: 3px;
+	padding: 6px 20px;
+	line-height: 1.7em;
+	font-weight:bold;
+	background: $cf7-submit-button-color;
+	opacity: .8;
+	border:none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition: all 0.2s;
+
+	&:hover{
+		color: #fff !important;
+		opacity: 1;
+		transition: all 0.2s;
+	}
+}
+
+.wpcf7-checkbox{
+	// make checkbox lists three-across
+	display:flex;
+	justify-content:space-between;
+	align-content:flex-start;
+	flex-wrap:wrap;
+	margin: 0 0 0 0;
+	
+	span.wpcf7-list-item{
+		
+		width:31%;
+		margin: 1em 0 0 0;
+
+		label {
+			@include clearfix();
+			display:flex;
+			justify-content: flex-start;
+
+			input[type="checkbox"]{
+				margin: 4px 0;
+			}
+			.wpcf7-list-item-label{
+				font-weight:normal;
+				margin-left:7px;
+
+				&:before{
+					content:none;
+				}
+			}
+		}
+	}
+}
+
+.wpcf7{
+	line-height:1.3em;
+}
+
+.wpcf7 input{
+	margin:10px 0;
+}
+
+// The response windows
+div.wpcf7-response-output {
+    // margin: 2em 0.5em 1em;
+    padding: 20px;
+    text-align: center;
+}
+
+@media all and (max-width: $tablet-max-width){
+	.wpcf7-checkbox span.wpcf7-list-item{
+		background: rgba(255,255,255,.1);
+		width:48%;
+		border-radius: 5px;
+
+		label {
+		    padding: 13px;
+		}
+
+		input[type="checkbox"]{}
+	}
+
+	.wpcf7-submit{
+		display: block;
+		padding: 18px 0;
+	}
+}
+
+@media all and (max-width: $mobile-large-max-width){
+	.wpcf7-checkbox span.wpcf7-list-item{ width:100%; }
+	.wpcf7-submit{ max-width: none; }
+	div.wpcf7-response-output {margin: 0 0 0 0;}
+}

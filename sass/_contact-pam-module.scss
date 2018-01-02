@@ -1,0 +1,62 @@
+$contact_pam_module_img_width:220px;
+$contact_pam_module_padding:25px; 
+
+.contact-pam-module{
+	@include clearfix();
+	background:lighten($gg_green, 25%);
+	border-top:3px solid $gg_green;
+	border-bottom:1px solid $gg_green;
+	margin:$contact_pam_module_padding 0;
+	padding:$contact_pam_module_padding;
+
+	img{
+		float:left;
+		display: block; 
+		max-width: $contact_pam_module_img_width; 
+		margin: 0 $contact_pam_module_padding 0 0;
+	}
+	p, h2{
+		margin:0 0 10px ($contact_pam_module_img_width + $contact_pam_module_padding);
+		margin:0;
+			padding:0;
+		line-height: 1.5em;		
+	}
+
+		h2{
+			font-size:30px;
+			color:#666;
+		}
+	.et_pb_promo_button.et_pb_button{
+		display: block;
+		max-width: 200px;
+		background:rgba(white, .7);
+		margin-left:$contact_pam_module_img_width + $contact_pam_module_padding;
+		margin-top:10px;
+		text-align: center;
+
+	}
+}
+
+@media all and (max-width:500px){
+
+	.contact-pam-module{
+		img{
+			float:none;
+			margin: 0 auto 15px auto;
+		}
+		p, h2{
+			
+			text-align:center;
+
+		}
+
+		h2{
+			font-size:30px;
+		}
+		.et_pb_promo_button.et_pb_button{
+			margin-left:auto;
+			margin: 10px auto;
+			max-width: none;
+		}
+	}
+}

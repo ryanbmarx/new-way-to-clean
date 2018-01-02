@@ -1,0 +1,29 @@
+.faq-answer-list{
+	margin:25px 0 0 0;
+}
+
+.et_pb_row.faq-answer{
+	@include clearfix();
+	margin-bottom:40px;
+	padding:0 0 40px 0;
+	border-bottom:1px solid #eee;
+
+	.answer__header{
+		// max-width:250px;
+		// float:left;
+		font-size: 30px !important; // For some reason, Divi constrains the font size of headers inside columns using important.
+	}
+
+	&__back-to-top{
+
+	}
+}
+
+@media all and (max-width:979px){
+	.et_pb_row.faq-answer{
+		&__back-to-top{display:none;}
+	}
+}
+
+
+

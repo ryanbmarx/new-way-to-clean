@@ -1,0 +1,196 @@
+/* 1-6 Blog Divi Layout Kit Css Code
+** Product Built By Divi Den - https://webdesign101.berlin/divi-den/
+** Get the latest kit here: https://webdesign101.berlin/product/blogs-divi-layout-kit/
+** Get Support Here: https://webdesign101.berlin/divi-den/support/
+** Default RED Colour to replace anywhere in the css = #cc0033
+*/
+
+body img.avatar {
+    display: none !important;
+}
+
+.blog_1 article {
+    width: 47% !important;
+    margin-right: 6% !important;
+    float: left;
+    background-color: #fff;
+    text-align: center;
+    padding: 3.4vw 3.4vw 273px;
+    position: relative;
+    cursor: pointer;
+}
+
+.blog_1 article:last-child {
+    margin-right: 0 !important;
+}
+
+.blog_1 h2.entry-title:before {
+    content: "\f0e6" !important;
+    display: block;
+    font-family: FontAwesome;
+    font-size: 60px;
+    color: #cc0033;
+    line-height: 100%;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.blog_1 .categories {
+    display: block;
+    font-size: 16px;
+    color: #9fa3a7 !important;
+    font-weight: 400;
+    padding: 18px 0;
+}
+
+#page-container .blog_1 .post-meta .author.vcard a {
+    color: #2c2c2c !important;
+}
+
+#page-container .blog_1 .post-meta .author.vcard {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    right: 0;
+    color: #2c2c2c !important;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+.blog_1 .post-content {
+    line-height: 189%;
+}
+
+.blog_1 .categories a:hover {
+    color: #cc0033 !important;
+}
+
+#page-container .blog_1 .post-meta .author.vcard img {
+    display: block !important;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+}
+
+/*Featured Image*/
+
+#page-container .blog_1 .et_pb_post .entry-featured-image-url {
+    margin-bottom: 20px !important;
+}
+
+/*Pagination*/
+
+#page-container .blog_1 .pagination a {color: #fff;}
+
+#page-container .blog_1 .pagination a:hover {opacity: 0.6;}
+
+/*Hovers*/
+
+.blog_1 article .post-content,
+.blog_1 article .post-meta .published,
+.blog_1 article,
+.blog_1 h2.entry-title:after {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog_1 h2.entry-title:after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 1px;
+    background-color: #ccc;
+    margin: 0 auto 0;
+}
+
+.blog_1 article .post-meta .published {
+    display: block;
+}
+
+.blog_1 article:hover .post-content,
+.blog_1 article:hover .post-meta .published {
+    transform: translate(0, 20px);
+
+}
+
+.blog_1 article:hover h2.entry-title:after {
+    width: 75%;
+    transform: translate(0, 20px);
+}
+
+.blog_1 article:hover {
+    border-radius: 10px;
+    box-shadow: 0 0 32.2px 2.8px rgba(0, 0, 0, 0.2);
+}
+
+.blog_1 article:hover .author.vcard a,
+.blog_1 article:hover .post-content,
+.blog_1 article:hover .post-meta .categories,
+.blog_1 article:hover .post-meta .published,
+.blog_1 article:hover h2.entry-title {
+    -webkit-animation: fadeIn 1s infinite; /* Safari 4.0 - 8.0 */
+    animation: fadeIn 1s infinite;
+    animation-iteration-count: 1;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+/*Responsive*/
+
+@media only screen and (max-width: 1390px) {
+    .blog_1 .post-meta .categories {
+        top: 115px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .blog_1 .post-meta .categories {
+        top: 105px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .blog_1 article {
+        width: 100% !important;
+        margin-right: 0 !important;
+        padding: 40px 40px 200px;
+    }
+
+    #page-container .blog_1 .post-meta .author.vcard {
+        bottom: 40px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .blog_1 article {
+        padding: 20px 20px 200px;
+    }
+
+    #page-container .blog_1 .post-meta .author.vcard {
+        bottom: 30px;
+    }
+}

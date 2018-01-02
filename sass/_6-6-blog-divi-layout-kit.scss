@@ -1,0 +1,162 @@
+/* 6-6 Blog Divi Layout Kit Css Code
+** Product Built By Divi Den - https://webdesign101.berlin/divi-den/
+** Get the latest kit here: https://webdesign101.berlin/product/blogs-divi-layout-kit/
+** Get Support Here: https://webdesign101.berlin/divi-den/support/
+** Default RED Colour to replace anywhere in the css = #cc0033
+*/
+
+body img.avatar {
+    display: none !important;
+}
+
+.blog_6 article h2.entry-title img.avatar {
+    display: none !important;
+}
+
+.blog_6 article {
+    width: 25% !important;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    padding: 3.2vw 2vw;
+    cursor: pointer;
+}
+
+.blog_6 a.entry-featured-image-url {
+    position: absolute;
+    top: 0;
+    height: 100% !important;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@-moz-document url-prefix() { 
+  .blog_6 a.entry-featured-image-url {
+      left: 100%;
+  }
+
+}
+
+.blog_6 .et_overlay:before {
+    top: 47%;
+}
+
+.blog_6 .post-content p {
+    max-height: 57px;
+    overflow: hidden;
+}
+
+.blog_6 .post-content {
+    z-index: 1;
+    position: relative;
+    line-height: 150%;
+}
+
+.blog_6 .entry-featured-image-url img {
+    height: 100% !important;
+    width: auto !important;
+    max-width: none !important;
+
+}
+
+.blog_6 .post-content .more-link:after {
+    content: "\f061";
+    font-family: FontAwesome;
+    margin-left: 35px;
+}
+
+/*Hovers*/
+
+.blog_6 article .post-content,
+.blog_6 article h2.entry-title,
+.blog_6 article:after {
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog_6 article:hover:after {
+
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a6000000', endColorstr='#00000000', GradientType=0);
+}
+
+.blog_6 article:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: visible;
+}
+
+.blog_6 article:hover .post-content {
+    transform: translate(0, -40%);
+}
+
+.blog_6 article:hover h2.entry-title {
+    transform: translate(0, 50%);
+}
+
+.blog_6 article:hover .more-link {opacity: 0.7;}
+
+/*Responsive*/
+
+@media only screen and (max-width: 1860px) {
+    .blog_6 article:hover .post-content {
+        transform: translate(0, -30%);
+    }
+
+    .blog_6 article:hover h2.entry-title {
+        transform: translate(0, 30%);
+    }
+}
+
+@media only screen and (max-width: 1390px) {
+    #page-container .blog_6 .et_pb_post h2 {
+        font-size: 20px !important;
+    }
+
+    #page-container .blog_6 .et_pb_post .more-link {
+        padding: 10px 21px;
+    }
+
+    #page-container .blog_6 .post-content p {
+        max-height: 43px;
+        font-size: 18px;
+    }
+
+    .blog_6 .post-content {
+        line-height: 120%;
+    }
+
+    .blog_6 article:hover h2.entry-title {
+        transform: translate(0, 35%);
+    }
+
+    .blog_6 article:hover .post-content {
+        transform: translate(0, -27%);
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .blog_6 article {
+        width: 50% !important;
+        padding: 40px;
+        margin-bottom: 0;
+    }
+
+    .blog_6 .post-meta {display: none;}
+}
+
+@media only screen and (max-width: 600px) {
+    .blog_6 article {
+        width: 100% !important;
+        padding: 40px;
+    }
+}

@@ -1,0 +1,29 @@
+// BLOOM ALTERATIONS
+
+$bloom-color: $norwex_blue_medium;
+
+.et_bloom .et_bloom_below_post .et_bloom_form_container div .et_bloom_header_outer{
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+}
+
+.et_bloom_form_header.split {
+	display:flex;
+	align-items:center;
+	justify-content: space-between;
+}
+#bloomwidget-5 {
+	.et_bloom .et_bloom_form_header img, 
+	.et_bloom .et_bloom_form_header .et_bloom_form_text{
+		padding: 0;
+	}
+}
+
+
+// // Switch the form background to a norwex-approved color. Will need to override some importants.
+// .et_bloom .et_bloom_optin_1 .et_bloom_form_content{
+// 	background: #{$bloom-color} !important;
+// }
+// .et_bloom .et_bloom_optin_1 .zigzag_edge .et_bloom_form_content::before{
+// 	background:linear-gradient(45deg,transparent 33.33%,#{$bloom-color} 33.333%,#{$bloom-color} 66.66%,transparent 66.66%) , linear-gradient(-45deg,transparent 33.33%,#{$bloom-color} 33.33%,#{$bloom-color} 66.66%,transparent 66.66%) !important;
+// }

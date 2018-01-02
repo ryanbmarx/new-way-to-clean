@@ -1,0 +1,99 @@
+// http://www.hongkiat.com/blog/skewed-edges-css/
+
+$color3:white;
+$color2:$norwex_blue_light;
+$color1:$norwex_green_light;
+
+.homepage-post{
+  position:relative;
+  overflow: hidden;
+
+  &__text-container{
+    margin-left: 13px;
+    padding: 10px;
+    &:before{
+      // This is the post pointer triangle
+      content: "\25c0";
+      display: block;
+      position: absolute;
+      bottom: 24px;
+      left: 1px;
+      color: white;
+      transform: skewy(-35deg);
+    }
+  }
+  &__title{
+    font-family: "Open Sans";
+    font-size: 18px;
+    margin:0;
+    padding: 0;
+    z-index:10;
+    
+    a{
+      color: black !important;
+    }
+
+  }
+  &__meta {
+  // This is the date. 
+  font-family: "Open Sans";
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  color:#888;
+  font-weight: bold;
+  margin:0;
+  padding: 0;
+  z-index:10;
+  }
+}
+
+
+
+
+.homepage-post:nth-child(even){
+  .homepage-post__text-container:before{
+// This is the post pointer triangle
+color: $color1;
+}
+margin-bottom: -7px;
+.homepage-post__text-container{
+  background:$color1;
+}
+
+.homepage-post__skewed-bg--after{
+  width: 0;
+  height: 0;
+  border-left: 635px solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 20px solid $color1;;
+  margin-left: 13px;
+}
+}
+
+.homepage-post:nth-child(odd){
+  .homepage-post__text-container:before{
+// This is the post pointer triangle
+color: $color2;
+}
+margin-bottom: 7px;
+.homepage-post__text-container{
+  background:$color2;
+}
+.homepage-post__skewed-bg--after{
+  width: 0;
+  height: 0;
+  border-left: 635px solid transparent;
+  border-right: 0 solid transparent;
+  border-top: 5px solid $color2;
+  margin-left: 13px;
+}
+.homepage-post__skewed-bg--before{
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 635px solid transparent;
+  border-bottom: 17px solid $color2;
+  margin-left: 13px;
+}
+}

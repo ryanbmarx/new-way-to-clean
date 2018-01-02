@@ -1,0 +1,41 @@
+{
+  "name": "new-way-to-clean",
+  "description": "Site design for NewWayToClean.com",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.3",
+    "browser-sync": "^2.11.1",
+    "colors": "^1.1.2",
+    "eslint": "^2.2.0",
+    "ftp": "^0.3.10",
+    "html-minify": "^0.3.1",
+    "install": "^0.8.1",
+    "node-notifier": "^5.1.2",
+    "node-sass": "^3.4.2",
+    "npm": "^3.10.5",
+    "npm-run-all": "^4.1.2",
+    "onchange": "^2.0.0",
+    "postcss-cli": "^2.5.1",
+    "sftp-promises": "^1.4.2"
+  },
+  "scripts": {
+    "lint:functions": "phplint 'functions.php'",
+    "scss": "node-sass --source-map true --output-style compressed  --output . sass/style.scss",
+    "autoprefixer": "postcss -u autoprefixer -r *.css",
+    "build:css": "npm run scss && npm run autoprefixer && node scripts/appendChildThemeMeta.js style.css && npm run upload:css",
+    "build": "run-p build:**",
+    "upload:css": "node scripts/upload.js style.css style.css.map",
+    "upload:functions": "node scripts/upload.js functions.php",
+    "upload:single": "node scripts/upload.js single.php",
+    "watch:functions": "onchange 'functions.php' -- npm run upload:functions",
+    "watch:css": "onchange 'sass/**/*.scss' -- run-s build:css upload:css",
+    "watch:single": "onchange 'single.php' -- run-s upload:single",
+    "watch": "run-p watch:**"
+  },
+  "dependencies": {}
+}
