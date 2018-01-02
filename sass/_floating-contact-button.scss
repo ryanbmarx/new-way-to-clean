@@ -1,0 +1,39 @@
+.floating-contact-button {
+	position: fixed;
+    right: 0;
+    top: 25%;
+    background: $norwex_green;
+    color: black !important; // important because the ET styles want to make this link green. NO!
+    z-index: 1000;
+    padding: 0px 15px;
+    transform: rotate(-90deg);
+    transform-origin: 100% 100%;
+    cursor:pointer;
+}
+
+@media all and (max-width:$tablet-max-width){
+    .floating-contact-button {
+        padding:0 20px;        
+    }
+}
+
+@media all and (max-width:$mobile-large-max-width){
+    .floating-contact-button {
+        left: 0;
+        bottom: 0;
+        top: inherit;
+        left: inherit;
+        display:block;
+        width:100%;
+
+        text-align: center;
+        padding:15px 0;
+        transform: rotate(0);
+        box-shadow: 0 -5px 5px rgba(black, .5);
+        cursor:pointer;
+    }
+}
+
+@media all and (max-width:$mobile-small-max-width){
+    .floating-contact-button { padding:10px 0; }
+}

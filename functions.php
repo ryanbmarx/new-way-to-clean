@@ -22,6 +22,18 @@ function showlibraryitem_shortcode($moduleid) {
 add_shortcode('showlibraryitem', 'showlibraryitem_shortcode');
 
 /*-----------------------------------------------------------------------------------*/
+/*  Add floating contact button
+/*-----------------------------------------------------------------------------------*/
+
+function media_salad_add_floating_button() {
+		echo "<a class='floating-contact-button' href='/contact'>CONTACT</a>";
+}
+add_action('wp_footer', 'media_salad_add_floating_button');
+
+
+
+
+/*-----------------------------------------------------------------------------------*/
 /* Add the MEET PAM header. Done as shortcode to protect the HTML */
 /*-----------------------------------------------------------------------------------*/
 
