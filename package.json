@@ -32,9 +32,11 @@
     "upload:css": "node scripts/upload.js style.css style.css.map",
     "upload:functions": "node scripts/upload.js functions.php",
     "upload:single": "node scripts/upload.js single.php",
+    "upload:prod-cat": "node scripts/upload.js category-norwex-products.php",
     "watch:functions": "onchange 'functions.php' -- npm run upload:functions",
     "watch:css": "onchange 'sass/**/*.scss' -- run-s build:css upload:css",
     "watch:single": "onchange 'single.php' -- run-s upload:single",
+    "watch:prod-cat": "onchange 'category-norwex-products.php' -- run-s upload:prod-cat",
     "watch": "run-p watch:**"
   },
   "dependencies": {}

@@ -1,0 +1,166 @@
+
+$grid-gap: 30px;
+
+// Use #left-area to override certain stylings
+body.category-norwex-products #left-area{
+	
+	.products{
+		display:flex;
+		justify-content: space-between;
+		align-items: stretch;
+
+		&__traveler-note{
+			display:none;
+		}
+		&__traveler{
+			max-width: 200px;
+			width: 100%;
+			margin-right: 5.5%; // Matches existing ET styles
+		
+			ul{
+				position:sticky;
+				top: 120px;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li a{
+					box-sizing: border-box;
+					display:block;
+					padding: 5px;
+					// background-color: rgba($norwex_blue_light, .5);
+					text-transform: none;
+					transition: all 100ms ease;
+					border-radius: 7px;
+
+					&:hover{
+						transition: all 100ms ease;
+						color: #555;
+						background-color: $norwex_blue_light;
+					}
+				}
+			}
+		}
+		&__posts{
+			flex:1;
+		}
+	}
+	
+
+	.product-category{
+		margin-bottom: $grid-gap;
+		padding-bottom: $grid-gap;
+		border-bottom: 1px solid #eee;
+		
+		// For the posts display
+		display: flex;
+		align-items:stretch;
+		justify-content: space-between;
+		flex-wrap:wrap;
+
+		&:last-of-type{
+			padding-bottom:0;
+			border-bottom:none;
+		}
+		
+		&__header{
+			width: 100%;
+			margin: 0 0 #{$grid-gap / 2} 0;
+		}
+
+		.et_pb_post{
+			margin-bottom: $grid-gap;
+			width: calc(50% - #{$grid-gap / 2});
+
+			.entry-title{
+				font-size: 27px;
+				line-height: 1.3em;
+				margin: 0 0 #{$grid-gap / 2} 0;
+			}
+
+			a + .entry-title{
+				// For when there are images
+				margin: #{$grid-gap / 2} 0;
+			}
+		}
+
+		&__more{
+			width: 100%;
+			margin: #{$grid-gap / 2} 0 0 0;
+			text-align: center;
+			text-transform:uppercase;
+
+			&:after{
+				content:\0187;
+				margin-left: 5px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 980px){
+	body.category-norwex-products #left-area{
+		
+		.products__traveler {
+			margin-right: $grid-gap / 2;
+			ul { top: $grid-gap / 2; }
+		}
+
+		.product-category .et_pb_post{
+			width: 100%;
+			position: relative;
+			margin-bottom: $grid-gap;
+			padding-bottom: $grid-gap;
+			// border-bottom: 1px solid #eee;
+			
+			&:after{
+				content:"";
+				display:block;
+				max-width: 100px;
+				width: 25%;
+				height: 1px;
+				background-color: #eee;
+
+				position: absolute;
+				top: 100%;
+				left: 50%;
+				transform: translate(-50%, 0);
+			}
+
+			&:last-of-type{
+				padding-bottom:0;
+				border-bottom:none;
+				&:after{
+					content:none;
+				}
+			}
+		}
+	}
+}
+
+@media all and (max-width: 650px){
+
+	body.category-norwex-products #left-area{
+		.products{ display:block; }
+		.products__traveler-note{
+			display:block;
+			font-weight: bold;
+			width: 100%;
+		}
+		.products__traveler {
+		    max-width: none;
+			margin-bottom: $grid-gap;
+			ul {
+				position:static;
+				display: flex;
+			    align-items: stretch;
+			    justify-content: space-between;
+			    flex-wrap: wrap;
+
+			    li{
+			    	width: calc(50% - #{$grid-gap / 2});
+			    }
+			}
+		}
+	}
+}
